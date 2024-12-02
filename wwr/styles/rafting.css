@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --primary-color: #000000;
     --secondary-color: #502F4C;
@@ -21,6 +26,7 @@ body {
 h1, h2 {
     font-family: 'Gelasio', serif;
     color: var(--accent1-color);
+    text-align: center;
 }
 
 p {
@@ -38,58 +44,184 @@ nav a:hover {
     color: var(--accent1-color);
 }
 
-footer p {
-    color: var(--secondary-color);
+/* Header styles */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 10px 0;
 }
 
-footer nav a img {
+.logo img {
+    max-height: 50px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
-/* hero_container_styles */
+.nav ul li a:hover {
+    color: var(--accent1-color);
+}
+
+/* Hero container styles */
 .hero {
     position: relative;
-    width: 100%;
-    height: auto;
-}
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    align-items: center;
+    }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.hero h1 {
+.background-image {
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--accent3-color);
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 0.5rem;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.hero h1{
+    margin-top: 3rem;
+    color: var(--accent3-color);;
+}
+
+article {
+    background-color: rgba(246, 245, 247, 0.6);
+    padding: 1rem;
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    border-radius: 10px;
+}   
+
+article img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+/* Adventures section styles */
+.adventure {
+    background-color: var(--accent2-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.adventure h2 {
+    background-color: var(--accent2-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.adventures figure {
+    margin: 0;
     text-align: center;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(236, 195, 245, 0.5);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    width: 80%;
-}
-
-.hero article img {
-    float: right;
-    margin-left: 1rem;
-    width: 10rem;
+.adventures img {
+    width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
-.hero article p {
+.adventures figcaption {
+    margin-top: 5px;
+    font-family: 'Gelasio', serif;
     color: var(--primary-color);
+}
+
+/* History section styles */
+.history {
+    margin: 40px 0;
+    background-color: var(--accent2-color);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.history h2 {
+    background-color: var(--accent2-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.history-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.history-content p {
+    width: 45%;
+}
+
+.history-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    background-color: var(--accent2-color);
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: var(--secondary-color);
+    flex-grow: 0.8;
+    text-align: center;
+}
+
+footer nav {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+footer nav a {
+    display: flex;
+    align-items: center;
+}
+
+footer nav a img {
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
 }
