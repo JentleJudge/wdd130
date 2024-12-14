@@ -23,7 +23,7 @@ body {
     padding: 0 20px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Gelasio', serif;
     color: var(--accent1-color);
     text-align: center;
@@ -92,7 +92,7 @@ header {
     flex-direction: column;
     gap: 10rem;
     align-items: center;
-    }
+}
 
 .background-image {
     position: absolute;
@@ -104,10 +104,9 @@ header {
     z-index: -1;
 }
 
-
-.hero h1{
+.hero h1 {
     margin-top: 3rem;
-    color: var(--accent3-color);;
+    color: var(--accent3-color);
 }
 
 article {
@@ -117,7 +116,7 @@ article {
     width: 80%;
     justify-content: center;
     border-radius: 10px;
-}   
+}
 
 article img {
     width: 250px;
@@ -190,8 +189,89 @@ article img {
     border-radius: 5px;
 }
 
-/* Footer styles */
+/* Contact section styles */
+.contact {
+    margin: 40px 0;
+    background-color: var(--accent2-color);
+    padding: 20px;
+    border-radius: 10px;
+}
 
+.contact h2, .contact h3 {
+    margin-bottom: 20px;
+}
+
+.company-info, .employee-profiles, .contact-form {
+    margin-bottom: 20px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.employee-profiles {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
+.employee-profiles figure {
+    text-align: center;
+}
+
+.employee-profiles img {
+    width: 60px;
+    height: 50px;
+    border-radius: 60%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: center;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    resize: none;
+    width: auto;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+
+}
+
+.contact-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.contact-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent3-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* Footer styles */
 footer {
     display: flex;
     justify-content: center;
